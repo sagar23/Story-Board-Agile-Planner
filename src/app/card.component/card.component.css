@@ -1,0 +1,23 @@
+  width: inherit;
+  padding: 5px;
+  margin: 1px 1px 1px 1px;
+display: block;
+ }
+.card :hover{
+  background: lightgoldenrodyellow;
+}
+
+.example-header-image {
+  background-size: cover;
+    background-color: palevioletred;
+}
+.card-name{
+  font-family: Roboto, Noto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  position: absolute;
+}
+.card-subname{
+  font-family: Roboto, Noto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  position: absolute;
+}

@@ -1,0 +1,28 @@
+
+<h1 mat-dialog-title>Create New Task</h1>
+<div mat-dialog-content class="mat-dialog-content form" >
+
+  <p>Name of the task?</p>
+  <mat-form-field >
+    <input matInput tabindex="1" [(ngModel)]="userTask.taskName" class="full-width" placeholder="Task Name">
+  </mat-form-field>
+
+  <p>Assigned to?</p>
+  <mat-form-field >
+    <input matInput tabindex="1" [(ngModel)]="userTask.taskAssigne" class="full-width" placeholder="Task TO Be Done By">
+  </mat-form-field>
+
+  <p>Discription</p>
+  <mat-form-field >
+    <textarea matInput placeholder="Description" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" class="full-width"
+      [(ngModel)]="userTask.taskDesc"></textarea>
+  </mat-form-field>
+
+  <p>Comments</p>
+  <mat-form-field>
+    <textarea matInput placeholder="Leave a comment" class="full-width"  [(ngModel)]="userTask.taskComments" placeholder="Comments"></textarea>
+  </mat-form-field>
+
+  <button mat-button [mat-dialog-close]="userTask" tabindex="2" color="primary">Ok</button>
+  <button mat-button (click)="onNoClick()" tabindex="-1" color="warn">No Thanks</button>
+</div>

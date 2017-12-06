@@ -1,0 +1,18 @@
+
+<h1 mat-dialog-title>Add New Sequence</h1>
+<div mat-dialog-content class="mat-dialog-content form" >
+
+  <p>Name of the Column /Sequence?</p>
+  <mat-form-field >
+    <input matInput tabindex="1" [(ngModel)]="gridList.gridName" class="full-width" placeholder="Grid Name">
+  </mat-form-field>
+
+  <p>Discription</p>
+  <mat-form-field >
+    <textarea matInput placeholder="Description" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" class="full-width"
+      [(ngModel)]="gridList.gridDesc"></textarea>
+  </mat-form-field>
+
+  <button mat-button [mat-dialog-close]="gridList" tabindex="2" color="primary">Ok</button>
+  <button mat-button (click)="onNoClick()" tabindex="-1" color="warn">No Thanks</button>
+</div>

@@ -1,0 +1,76 @@
+
+mat-grid-tile {
+  background: lightblue;
+}
+
+.button-create {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  justify-content: space-around;
+}
+.card-div{
+  width : 100%;
+}
+.main-button {
+    position:absolute;
+    bottom: 5%;
+    right:0%;
+    top: 100%;
+    background-color: tomato;
+    } 
+  .save-button {
+    position:absolute;
+    bottom: 5%;
+    right:10%;
+    top: 100%;
+    background-color: lightgreen;
+    }
+  .open-button {
+    position:absolute;
+    bottom: 5%;
+    right:5%;
+    top: 100%;
+    background-color: lightblue;
+    }
+
+.listHeader p{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5em;
+  margin-top: 0px;
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: groove;
+    border-width: 0.5px;
+    width: 100%;
+} 
+  /*---------------------------side nav -------------*/
+  .example-container {
+  width: 100%;
+  height: 850px;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+/*----------------------open list classes---------------*/
+.openList{
+  cursor: pointer;
+}
+.openList:hover{
+  background-color: lightskyblue;
+  color: steelblue;
+}

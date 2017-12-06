@@ -1,0 +1,11 @@
+.header-image{
+    background-color: palevioletred;
+      background-size: cover;
+
+}
+mat-card-header{
+    padding: 10px;
+}
+mat-form-field{
+    width:100%;
+}

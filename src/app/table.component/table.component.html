@@ -1,0 +1,35 @@
+<mat-sidenav-container class="example-container">
+
+  <mat-sidenav #sidenav class="example-sidenav">
+    <mat-list>
+      <mat-list-item *ngFor="let list of openList" class="openList">
+        <h4 mat-line (click)="setGridData(list)">{{list}}</h4>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-grid-list cols="4" rowHeight="1:2" class="mat-grid-list">
+    <div *ngFor="let grid of gridList ; let i = index" [attr.data-id]="id">
+      <mat-grid-tile class="grid-tile">
+        <div class="listHeader">
+          <p>{{grid.gridName}}</p>
+          <button mat-mini-fab class="button-create" (click)="openDialog(i,grid.Id)">+
+      </button>
+        </div>
+        <hr>
+        <div style="width: 100% ; height: 100%" [dragula]='"bag"' [dragulaModel]='grid.cards'>
+          <div *ngFor="let cards of grid.cards">
+            <card [Object]="cards" (cardDeleted)="refreshGrid($event)"></card>
+          </div>
+        </div>
+      </mat-grid-tile>
+    </div>
+    <button mat-mini-fab class="main-button" (click)="createGridDialog()">+
+ </button>
+    <button mat-mini-fab class="open-button" (click)="sidenav.open() ; getOpenList()">O
+ </button>
+    <button mat-mini-fab class="save-button" (click)="saveSequence()" *ngIf="saveSeq === undefined">S
+ </button>
+
+
+  </mat-grid-list>
+</mat-sidenav-container>

@@ -1,0 +1,29 @@
+
+<div class="test">
+<mat-card class="card">
+    <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title >{{data.taskName}}</mat-card-title>
+        <mat-card-subtitle>{{data.taskAssigned}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p *ngIf="!editFlag">{{data.taskDesc}}
+        </p>
+        <p *ngIf="!editFlag">Comment:- {{data.taskComments}}</p>
+        <mat-form-field  *ngIf="editFlag">
+             <textarea matInput placeholder="Description" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" class="full-width"
+              [(ngModel)]="data.taskDesc"></textarea>
+        </mat-form-field>
+        <mat-form-field  *ngIf="editFlag">
+             <textarea matInput placeholder="Leave a comment" class="full-width"  [(ngModel)]="data.taskComments" placeholder="Comments"></textarea>
+         </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button color="primary" (click)="editEnabled()" *ngIf="!editFlag">Edit</button>
+        <button mat-button color="primary"  *ngIf="editFlag" [mat-dialog-close]="data" >Save</button>
+        <button mat-button color="warn" (click)="deleteCard(data)" [mat-dialog-close]="{'data':data , 'delete' : 'true'}">Delete</button>
+    </mat-card-actions>
+
+</mat-card>
+</div>
