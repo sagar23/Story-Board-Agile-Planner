@@ -5,7 +5,15 @@ import { cardDialogComponent } from '../card.dialog.component/card.dialog.compon
 
 @Component({
   selector: `card`,
-  templateUrl: 'card.component.html',
+  templateUrl:`
+  <mat-card class="card" (click)="openDialog()">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title >{{taskName}}</mat-card-title>
+    <mat-card-subtitle>{{taskDesc}}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+`,
   styleUrls: ['card.component.css'],
 
 })
