@@ -4,7 +4,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { cardDialogComponent } from '../card.dialog.component/card.dialog.component'
 
 @Component({
-  selector: 'card',
+  selector: `card`,
   templateUrl: 'card.component.html',
   styleUrls: ['card.component.css'],
 
